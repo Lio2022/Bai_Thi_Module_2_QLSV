@@ -43,10 +43,10 @@ public class MenuHocSinh {
                     hamChucNang.sapXep();
                     break;
                 case 6:
-                    System.out.println("Doc file thanh cong");
+                   hamChucNang.docFile();
                     break;
                 case 7:
-                    System.out.println("Ghi file thanh Cong");
+                    hamChucNang.ghiFile();
                     break;
                 case 8:
                     return;

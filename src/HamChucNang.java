@@ -7,7 +7,7 @@ public class HamChucNang {
     Scanner scanner = new Scanner(System.in);
     ReadAndWrite readAndWrite = new ReadAndWrite();
     File file = new File("D:\\Codegym\\ThucHanh\\Case_2_bai_thi\\src\\File_Doc.CSV");
-    ArrayList<SinhVien> sinhViens = readAndWrite.read(file);
+    ArrayList<SinhVien> sinhViens =new ArrayList<>();
 
     public void hienThi() {
         for (int i = 0; i < sinhViens.size(); i++) {
@@ -98,7 +98,7 @@ public class HamChucNang {
 
     public void themSinhVien() {
         sinhViens.add(taoSinhVien());
-        readAndWrite.write(file, sinhViens);
+
     }
 
     public void suaSinhVien() {
@@ -167,6 +167,14 @@ public class HamChucNang {
             case 3:
                 return;
         }
+    }
+    public void docFile(){
+        sinhViens= readAndWrite.read(file);
+        System.out.println("doc file thanh cong");
+    }
+    public void ghiFile(){
+        readAndWrite.write(file, sinhViens);
+        System.out.println("ghi file thanh cong");
     }
 }
 
